@@ -60,7 +60,10 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
@@ -115,6 +118,97 @@
 .mySlides {
     transform: scale(0.7) !important;
 }
+
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden; /* <===  */
+  border-radius: 15px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.btn:active {
+  transform: scale(1.1);
+}
+.btn-prev {
+    top: 45%;
+    left: 82%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 1200px !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 800px;
+    height: 1200px !important;
+    position: relative;
+    overflow: hidden;
+        transform: scale(0.8);
+}
+.slider-bg2 .slider-content p {
+    color: #676f67;
+    font-size: 22px !important;
+    line-height: 30px !important;
+    margin-bottom: 0;
+}
+
+.choose-btn a {
+    background: #0e3e87 !important;
+    width: 45% !important;
+}
+  .btn.ss-btn { {
+    -moz-user-select: none;
+    background: #134894 !important;
+    box-shadow: none !important;
+    border: none;
+    border-radius: 10px !important;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    width: 30% !important;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 15px 35px;
+    text-align: center;
+    text-transform: unset;
+    touch-action: manipulation;
+    transition: all 0.3sease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+
 </style>
    </head>
    <body>
@@ -332,66 +426,98 @@
            
                <div class="section-title w-title left-align mb-15">
                            <h2 style="text-align:center;">Our App</h2>
+
+                           <div class="section-title w-title left-align mb-25">
+                           <p style="text-align: center;">Leap into the Future by exploring our Application's Interfaces</p>
+                           <p style="text-align: center;">Easy-to-Use Interface – A clean and intuitive design makes scheduling messages quick and hassle-free for everyone. </p></div>
+                              </li>
                         </div>
-               <div class="container" style="margin-top:-19%;">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 1.jpg" style="width:100%">
+                        </div>
+              <section id="image-carousel" class="splide" aria-label="Beautiful Images" style="margin-left: 20%;">
+<!-- Slider container -->
+<div class="slider">
+  <!-- slide 1 -->
+  <div class="slide">
+    <img src="img/AndroidScreens/Android Play StoreArtboard 1.jpg" alt="" />
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 2.jpg" style="width:100%">
+  <!-- slide 2 -->
+  <div class="slide">
+     <img src="img/AndroidScreens/Android Play StoreArtboard 2.jpg" alt="" />
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 3.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 4.jpg" style="width:100%">
+  <!-- slide 3 -->
+  <div class="slide">
+     <img src="img/AndroidScreens/Android Play StoreArtboard 3.jpg" alt="" />
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 5.jpg" style="width:100%">
-  </div>
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="img/AndroidScreens/Android Play StoreArtboard 6.jpg" style="width:100%">
-  </div>   
- 
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
+  <!-- slide 4 -->
+  <div class="slide">
+     <img src="img/AndroidScreens/Android Play StoreArtboard 4.jpg" alt="" />
   </div>
 
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Splash Screen">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sign-up Screen">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Schedule New SMS">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Scheduled Sms List">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Schedule New Email">
-    </div>    
-   <div class="column">
-      <img class="demo cursor" src="img/AndroidScreens/Android Play StoreArtboard 6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Scheduled Email List">
-    </div> 
-  </div>
+  <!-- Control buttons -->
+  <button class="btn btn-next"> > </button>
+  <button class="btn btn-prev">
+    < </button>
 </div>
+</section>
 </div>
+
+<script>
+
+
+	"use strict";
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// select next slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+</script>
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);

@@ -50,6 +50,9 @@
 	color: #687068;
 	font-style: normal;
 }
+p h2 h1 h3 h4 h5 {
+	font-family: 'Poppins', sans-serif !important;	
+}
 .img {
 	max-width: 100%;
 	transition: all 0.3s ease-out 0s;
